@@ -270,9 +270,10 @@ class _HomePageState extends State<HomePage> {
                       margin: const EdgeInsets.only(bottom: 8),
                       child: ListTile(
                         title: Text(services[index]['name'] ?? 'Service',
-                            style: Theme.of(context).textTheme.labelLarge),
+                            style: Theme.of(context).textTheme.bodyLarge),
                         subtitle: Text(
                           'Stylist: ${stylist != null ? stylist['name'] : 'Unknown'}',
+                          style: Theme.of(context).textTheme.bodyMedium,
                         ),
                         trailing: Text(
                           'LKR. ${services[index]['price'] ?? 'Price'}',
@@ -281,6 +282,7 @@ class _HomePageState extends State<HomePage> {
                         onTap: () {
                           selectDateTime(services[index]['id'], stylist['id']);
                         },
+
                       ),
                     );
                   }),
