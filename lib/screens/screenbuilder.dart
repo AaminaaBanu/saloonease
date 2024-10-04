@@ -25,7 +25,7 @@ class _ScreenbuildState extends State<Screenbuild> {
     // Initialize screens with a callback for updating the profile image
     _screens.addAll([
       HomePage(),
-      AppointemetsScreen(),
+      AppointmentsScreen(),
       BookingScreen(),
       ProfileScreen(
         profileImage: _profileImage,
