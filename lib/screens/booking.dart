@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:salonease1/screens/screenbuilder.dart';
 import 'package:salonease1/utils/config.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
@@ -183,7 +184,7 @@ class _BookingScreenState extends State<BookingScreen> {
             TextButton(
               child: Text('OK'),
               onPressed: () {
-                Navigator.of(context).pop();
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => Screenbuild()));
               },
             ),
           ],

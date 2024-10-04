@@ -3,6 +3,8 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'appointmentdetailsscreen.dart';
+
 class AppointmentsScreen extends StatefulWidget {
   const AppointmentsScreen({super.key});
 
@@ -97,8 +99,12 @@ class _AppointmentsScreenState extends State<AppointmentsScreen> {
               ),
               onTap: () {
                 // Handle appointment selection if needed
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('Selected Appointment: ${appointment['service']['name']}')),
+                // Navigate to appointment details screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AppointmentDetailScreen(appointment: appointment),
+                  ),
                 );
               },
             ),
